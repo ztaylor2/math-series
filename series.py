@@ -10,8 +10,12 @@ def fibonacci(n):
         return 0
     elif n == 1:
         return 1
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+    elif n not in fibonacci_numbers:
+        fibonacci_numbers.update({n: fibonacci(n - 1) + fibonacci(n - 2)})
+    return fibonacci_numbers[n]
+
+
+lucas_numbers = {}
 
 
 def lucas(n):
@@ -20,13 +24,13 @@ def lucas(n):
         return 2
     elif n == 1:
         return 1
-    else:
-        return lucas(n - 1) + lucas(n - 2)
+    elif n not in lucas_numbers:
+        lucas_numbers.update({n: lucas(n - 1) + lucas(n - 2)})
+    return lucas_numbers[n]
 
 
 def sum_series(n, first=0, second=1):
     """creates a sum_seris"""
-    print(n, first, second)
     if n == 0:
         return first
     elif n == 1:

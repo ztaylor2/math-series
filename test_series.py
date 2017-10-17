@@ -21,13 +21,13 @@ def test_lucas(n, result):
 
 @pytest.mark.parametrize('n, result', FIB_TABLE)
 def test_sum_series_default(n, result):
-    """testing our sum_series funciton default"""
+    """testing our sum_series funciton default values"""
     from series import sum_series
     assert sum_series(n) == result
 
 
 @pytest.mark.parametrize('n, result', LUC_TABLE)
 def test_sum_serie_lucas(n, result):
-    """testing our sum_series funciton default"""
+    """testing our sum_series funciton, lucas values as optional input"""
     from series import sum_series
     assert sum_series(n, 2, 1) == result
