@@ -1,0 +1,7 @@
+{
+  "test_series.py::test_fibonacci[0-1]": true,
+  "test_series.py::test_fibonacci[4-5]": true,
+  "test_series.py::test_fibonacci[5-8]": true,
+  "test_series.py::test_fibonacci[6-13]": true,
+  "test_series.py::test_foo": true
+}
