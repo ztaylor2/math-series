@@ -5,7 +5,7 @@ fibonacci_numbers = {}
 
 
 def fibonacci(n):
-    """creates a fibonacci series"""
+    """Create a fibonacci series."""
     if n == 0:
         return 0
     elif n == 1:
@@ -19,7 +19,7 @@ lucas_numbers = {}
 
 
 def lucas(n):
-    """creates a lucas series"""
+    """Create a lucas series."""
     if n == 0:
         return 2
     elif n == 1:
@@ -30,7 +30,7 @@ def lucas(n):
 
 
 def sum_series(n, first=0, second=1):
-    """creates a sum_seris"""
+    """Create a sum_seris."""
     if n == 0:
         return first
     elif n == 1:
@@ -41,22 +41,28 @@ def sum_series(n, first=0, second=1):
 
 
 if __name__ == "__main__":
-    print("This module defines functions that implement mathematical series.")
-    print()
-    print("fibonacci(n): ")
-    print("Returns the nth value of the fibonacci series")
-    print("fibonacci(5): ")
-    print(fibonacci(5))
-    print()
-    print("lucas(n): ")
-    print("Returns the nth value of the lucas series")
-    print("lucas(5): ")
-    print(lucas(5))
-    print()
-    print("sum_series(n, first=0, second=1): ")
-    print("Returns the nth value of a sum series")
-    print("If no initial values are given it will default to fibonacci")
-    print("sum_series(5): ")
-    print(sum_series(5))
-    print("sum_series(5, 5, 5): ")
-    print(sum_series(5, 2, 1))
+    output = """
+    This module defines functions that implement mathematical series.
+
+    fibonacci(n):
+    Returns the nth value of the fibonacci series
+    >>> fibonacci(5):
+    {}
+
+    lucas(n):
+    Returns the nth value of the lucas series
+    >>> lucas(5):
+    {}
+
+    sum_series(n, first=0, second=1):
+    Returns the nth value of a sum series
+    If no initial values are given it will default to fibonacci
+    >>> sum_series(5):
+    {}
+
+    >>> sum_series(5, 5, 5):
+    {}
+"""
+
+    print(output.format(fibonacci(5), lucas(5),
+                        sum_series(5), sum_series(5, 2, 1)))
